@@ -99,9 +99,15 @@ public class Sudoku {
 	}
 	
 	/**
-	 * 
+	 *  This method checks if the puzzle can be solved. 
+	 *  If the current value passed is null, this means that the puzzle is already solved.
+	 *  If the value at the current cell position is not zero, we move on to the next cell. 
+	 *  We use the isValid method to check for all possible values of a cell, that is, 1-9. 
+	 *  If we are unable to find a solvable value, this method returns false and the puzzle is unsolvable.
 	 * @param current
+	 * 		the current cell holding values for row and column for the cell we are currently looking at
 	 * @return
+	 * 		true is the puzzle is solvable, false otherwise
 	 */
 	public static boolean solve(gridReference current) 
 	{			
